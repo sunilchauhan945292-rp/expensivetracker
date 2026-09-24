@@ -1,0 +1,318 @@
+.transaction-form {
+    width: 100%;
+    max-width: 620px;
+    margin: 40px auto;
+    padding: 32px;
+
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.02),
+        0 15px 35px rgba(0, 0, 0, 0.08);
+
+    font-family: Arial, sans-serif;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 28px;
+}
+
+.form-header h2 {
+    margin: 8px 0 6px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #111827;
+}
+
+.form-header p {
+    margin: 0;
+
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.form-badge {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    background: #eef2ff;
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+
+    border-radius: 20px;
+}
+
+.form-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 26px;
+    font-weight: 300;
+
+    border-radius: 14px;
+
+    box-shadow: 0 8px 18px rgba(79, 70, 229, 0.25);
+}
+
+/* ---------------- ERROR ---------------- */
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+    margin-bottom: 20px;
+
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    color: #dc2626;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.error-message span {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #dc2626;
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ---------------- INPUTS ---------------- */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #374151;
+}
+
+.form-group label span {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    background: #f9fafb;
+
+    color: #111827;
+    font-size: 15px;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s,
+        background 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    background: white;
+
+    border-color: #6366f1;
+
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 80px;
+
+    font-family: inherit;
+}
+
+/* ---------------- ROW ---------------- */
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+/* ---------------- AMOUNT ---------------- */
+
+.amount-input {
+    position: relative;
+}
+
+.amount-input span {
+    position: absolute;
+
+    left: 14px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.amount-input input {
+    padding-left: 32px;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.form-actions {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 8px;
+}
+
+.submit-btn {
+    flex: 1;
+
+    padding: 13px 20px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        transform 0.15s,
+        box-shadow 0.2s;
+}
+
+.submit-btn:hover {
+    background: #4338ca;
+
+    box-shadow: 0 6px 16px rgba(79, 70, 229, 0.25);
+
+    transform: translateY(-1px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+.cancel-btn {
+    padding: 13px 24px;
+
+    background: white;
+    color: #4b5563;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.cancel-btn:hover {
+    background: #f3f4f6;
+    border-color: #9ca3af;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 600px) {
+
+    .transaction-form {
+        margin: 20px auto;
+        padding: 22px;
+
+        border-radius: 16px;
+    }
+
+    .form-header h2 {
+        font-size: 23px;
+    }
+
+    .form-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 22px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .cancel-btn {
+        width: 100%;
+    }
+}
